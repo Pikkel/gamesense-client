@@ -21,7 +21,7 @@ public class Welcomer extends HUDModule {
 
     @Override
     public void populate(ITheme theme) {
-    	component = new ListComponent(new Labeled(getName(),null,()->true), position, getName(), new WelcomerList(), GameSenseGUI.FONT_HEIGHT, HUDModule.LIST_BORDER);
+        component = new ListComponent(new Labeled(getName(),null,()->true), position, getName(), new WelcomerList(), GameSenseGUI.FONT_HEIGHT, HUDModule.LIST_BORDER);
     }
 
     private class WelcomerList implements HUDList {
@@ -33,7 +33,7 @@ public class Welcomer extends HUDModule {
 
         @Override
         public String getItem(int index) {
-            return "Hello " + mc.player.getName() + " :^)";
+            return mc.player.getName() + " is a femboy" + " :^)";
         }
 
         @Override
