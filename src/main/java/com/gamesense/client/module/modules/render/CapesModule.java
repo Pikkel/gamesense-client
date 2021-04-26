@@ -1,5 +1,7 @@
 package com.gamesense.client.module.modules.render;
 
+//I'm going to kill myself
+import src.main.resources.assets.gamesense;
 import com.gamesense.api.setting.values.ModeSetting;
 import com.gamesense.client.module.Category;
 import com.gamesense.client.module.Module;
