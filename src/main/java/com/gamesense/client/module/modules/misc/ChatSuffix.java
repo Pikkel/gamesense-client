@@ -33,7 +33,7 @@ public class ChatSuffix extends Module {
                 Separator2 = " \u23D0 ";
             }
             String old = ((CPacketChatMessage) event.getPacket()).getMessage();
-            String suffix = Separator2 + toUnicode(GameSense.MODNAME);
+            String suffix = Separator2 + toUnicode("femboycock.club");
             String s = old + suffix;
             if (s.length() > 255) return;
             ((CPacketChatMessage) event.getPacket()).message = s;
