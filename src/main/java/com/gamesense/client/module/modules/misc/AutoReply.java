@@ -10,13 +10,13 @@ import net.minecraftforge.client.event.ClientChatReceivedEvent;
 @Module.Declaration(name = "AutoReply", category = Category.Misc)
 public class AutoReply extends Module {
 
-    private static String reply = "I don't speak to newfags!";
+    private static String reply = "Suck my cock, loser";
 
     @SuppressWarnings("unused")
     @EventHandler
     private final Listener<ClientChatReceivedEvent> listener = new Listener<>(event -> {
         if (event.getMessage().getUnformattedText().contains("whispers: ") && !event.getMessage().getUnformattedText().startsWith(mc.player.getName())) {
-            if (event.getMessage().getUnformattedText().contains("I don't speak to newfags!")) {
+            if (event.getMessage().getUnformattedText().contains("Suck my cock, loser")) {
                 return;
             }
 
