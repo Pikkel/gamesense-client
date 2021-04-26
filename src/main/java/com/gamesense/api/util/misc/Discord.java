@@ -12,7 +12,7 @@ import com.gamesense.client.GameSense;
 
 public class Discord {
 
-    private static final String discordID = "770790009397313596";
+    private static final String discordID = "834787770463027201";
     private static final DiscordRichPresence discordRichPresence = new DiscordRichPresence();
     private static final DiscordRPC discordRPC = DiscordRPC.INSTANCE;
 
@@ -25,10 +25,10 @@ public class Discord {
         discordRPC.Discord_Initialize(discordID, eventHandlers, true, null);
 
         discordRichPresence.startTimestamp = System.currentTimeMillis() / 1000L;
-        discordRichPresence.details = clientVersion;
-        discordRichPresence.largeImageKey = "logo";
-        discordRichPresence.largeImageText = "discord.gg/xfgPw63";
-        discordRichPresence.state = null;
+        discordRichPresence.details = "Sucking dick";
+        discordRichPresence.largeImageKey = "clientrpc";
+        discordRichPresence.largeImageText = "https://femboycock.club/";
+        discordRichPresence.state = "b0.1";
         discordRPC.Discord_UpdatePresence(discordRichPresence);
     }
 
