@@ -14,7 +14,7 @@ import net.minecraft.util.text.TextComponentString;
 
 public class MessageBus {
 
-    public static String watermark = ChatFormatting.GRAY + "[" + ChatFormatting.WHITE + "Game" + ChatFormatting.GREEN + "Sense" + ChatFormatting.GRAY + "] " + ChatFormatting.RESET;
+    public static String watermark = ChatFormatting.GRAY + "[" + ChatFormatting.OBFUSCATED + "|" + ChatFormatting.LIGHT_PURPLE + "FemboyCock" + ChatFormatting.WHITE + ".club" + ChatFormatting.OBFUSCATED + "|" + ChatFormatting.GRAY + "] " + ChatFormatting.RESET;
     public static ChatFormatting messageFormatting = ChatFormatting.GRAY;
 
     protected static final Minecraft mc = Minecraft.getMinecraft();
