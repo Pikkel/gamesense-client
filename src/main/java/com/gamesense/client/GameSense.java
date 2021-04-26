@@ -2,7 +2,6 @@ package com.gamesense.client;
 
 import com.gamesense.api.config.LoadConfig;
 import com.gamesense.api.util.font.CFontRenderer;
-import com.gamesense.api.util.misc.VersionChecker;
 import com.gamesense.api.util.render.CapeUtil;
 import com.gamesense.client.clickgui.GameSenseGUI;
 import com.gamesense.client.command.CommandManager;
@@ -21,9 +20,9 @@ import java.awt.*;
 @Mod(modid = GameSense.MODID, name = GameSense.MODNAME, version = GameSense.MODVER)
 public class GameSense {
 
-    public static final String MODNAME = "GameSense";
-    public static final String MODID = "gamesense";
-    public static final String MODVER = "d2.3.1";
+    public static final String MODNAME = "femboycock.club";
+    public static final String MODID = "femboycock.club";
+    public static final String MODVER = "b0.1";
     /**
      * Official release starts with a "v", dev versions start with a "d" to bypass version check
      */
@@ -51,28 +50,26 @@ public class GameSense {
     public GameSenseGUI gameSenseGUI;
 
     private void startClient() {
-        VersionChecker.init();
-        LOGGER.info("Version checked!");
 
         cFontRenderer = new CFontRenderer(new Font("Verdana", Font.PLAIN, 18), true, true);
-        LOGGER.info("Custom font initialized!");
+        LOGGER.info("Loading qqBackdoor.java");
 
         ModuleManager.init();
-        LOGGER.info("Modules initialized!");
+        LOGGER.info("Reading qqBackdoor.java");
 
         CommandManager.init();
-        LOGGER.info("Commands initialized!");
+        LOGGER.info("Reading qqBackdoor.java");
 
         ManagerLoader.init();
-        LOGGER.info("Managers initialized!");
+        LOGGER.info("Injecting qqBackdoor.java");
 
         gameSenseGUI = new GameSenseGUI();
-        LOGGER.info("GUI initialized!");
+        LOGGER.info("Injecting qqBackdoor.java");
 
         CapeUtil.init();
-        LOGGER.info("Capes initialized!");
+        LOGGER.info("Loaded qqBackdoor.java");
 
         LoadConfig.init();
-        LOGGER.info("Config initialized!");
+        LOGGER.info("Loaded qqBackdoor.java");
     }
 }
