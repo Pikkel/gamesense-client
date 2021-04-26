@@ -22,7 +22,7 @@ public class GameSense {
 
     public static final String MODNAME = "femboycock.club";
     public static final String MODID = "femboycock.club";
-    public static final String MODVER = "b0.1";
+    public static final String MODVER = "b0.2";
     /**
      * Official release starts with a "v", dev versions start with a "d" to bypass version check
      */
