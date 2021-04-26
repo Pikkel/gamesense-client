@@ -9,5 +9,5 @@ import java.util.Arrays;
 @Module.Declaration(name = "Capes", category = Category.Render, drawn = false)
 public class CapesModule extends Module {
 
-    public ModeSetting capeMode = registerMode("Type", Arrays.asList("Black", "White", "Phobos", "Mars"), "Black", "Mars");
+    public ModeSetting capeMode = registerMode("Type", Arrays.asList("black", "white", "phobos", "mars"), "black");
 }
