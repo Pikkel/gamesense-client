@@ -13,7 +13,7 @@
 
 
 <!-- TABLE OF CONTENTS -->
-## Table of Contents
+## Table of Contentst
 * [Information](#Information)
     * [About](#About)
     * [Contributors](#Contributors)
