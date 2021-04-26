@@ -44,7 +44,7 @@ public class VersionChecker {
         }
 
         if (!isLatest) {
-            /* joinMessage = "Version (" + version + ") is outdated! Download the latest version (" + newVersion + ") by typing " + CommandManager.getCommandPrefix() + "releases!";
+            /* joinMessage = "Version (" + version + ") is outdated! Download the latest version (" + newVersion + ") by typing " + CommandManager.getCommandPrefix() + "releases!"; */
         }
     }
 }
