@@ -26,12 +26,22 @@ public abstract class MixinAbstractClientPlayer {
     public void getLocationCape(CallbackInfoReturnable<ResourceLocation> callbackInfoReturnable) {
         UUID uuid = getPlayerInfo().getGameProfile().getId();
         CapesModule capesModule = ModuleManager.getModule(CapesModule.class);
-
+        // TODO: this is really dumb and we should make this better
+        // by adding an enum
         if (capesModule.isEnabled() && CapeUtil.hasCape(uuid)) {
-            if (capesModule.capeMode.getValue().equalsIgnoreCase("Black")) {
+            switch (capesModule.capeMode.getValue()) {
+            case "Black":
                 callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capeblack.png"));
-            } else {
+                break;
+            case "White":
                 callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capewhite.png"));
+                break;
+            case "phobos":
+                callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capephobos.png"));
+                break;
+            case "mars":
+                callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capemars.png"));
+                break;
             }
         }
     }
