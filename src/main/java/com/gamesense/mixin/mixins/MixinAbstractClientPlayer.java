@@ -36,6 +36,9 @@ public abstract class MixinAbstractClientPlayer {
         // TODO: this is really dumb and we should make this better by adding an enum
         if (capesModule.isEnabled() && CapeUtil.hasCape(uuid)) {
             switch (capesModule.capeMode.getValue()) {
+            case "femboycock":
+                callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capefemboycock.png"));
+                break;
             case "black":
                 callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capeblack.png"));
                 break;
@@ -71,6 +74,9 @@ public abstract class MixinAbstractClientPlayer {
                 break;
             case "namiix":
                 callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capenamiix.png"));
+                break;
+            case "tails":
+                callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capetails.png"));
                 break;
             }
         }
