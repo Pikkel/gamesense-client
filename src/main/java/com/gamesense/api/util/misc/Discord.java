@@ -28,7 +28,7 @@ public class Discord {
         discordRichPresence.details = "Sucking dick";
         discordRichPresence.largeImageKey = "clientrpc";
         discordRichPresence.largeImageText = "https://femboycock.club/";
-        discordRichPresence.state = "b0.1";
+        discordRichPresence.state = "b0.2";
         discordRPC.Discord_UpdatePresence(discordRichPresence);
     }
 
