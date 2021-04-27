@@ -10,5 +10,5 @@ import java.util.Arrays;
 public class CapesModule extends Module {
 
     //this new shit should work
-    public ModeSetting capeMode = registerMode("Type", Arrays.asList("femboycock", "black", "white", "phobos", "mars", "lofi", "gentowo", "zane", "tux", "flushed", "boba", "nhs", "namiix"), "femboycock");
+    public ModeSetting capeMode = registerMode("Type", Arrays.asList("femboycock", "black", "white", "phobos", "mars", "lofi", "gentowo", "zane", "tux", "flushed", "boba", "nhs", "namiix", "tails"), "femboycock");
 }
