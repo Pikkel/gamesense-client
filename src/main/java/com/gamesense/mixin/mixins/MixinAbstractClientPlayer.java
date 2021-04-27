@@ -57,6 +57,9 @@ public abstract class MixinAbstractClientPlayer {
             case "zane":
                 callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capezane.png"));
                 break;
+            case "tux":
+                callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capetux.png"));
+                break;
             }
         }
     }
