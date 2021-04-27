@@ -63,7 +63,7 @@ public abstract class MixinAbstractClientPlayer {
             case "flushed":
                 callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capeflushed.png"));
                 break;
-            case "boba"
+            case "boba":
                 callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capeboba.png"));
                 break;
             }
