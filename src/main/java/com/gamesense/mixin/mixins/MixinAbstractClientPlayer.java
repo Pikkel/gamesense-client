@@ -41,6 +41,15 @@ public abstract class MixinAbstractClientPlayer {
             case "mars":
                 callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capemars.png"));
                 break;
+            case "lofi":
+                callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capelofiblack.png"));
+                break;
+            case "gentowo":
+                callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capegentowo.png"));
+                break;
+            case "zane":
+                callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capezane.png"));
+                break;
             }
         }
     }
