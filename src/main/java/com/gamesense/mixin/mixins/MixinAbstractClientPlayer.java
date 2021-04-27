@@ -60,6 +60,9 @@ public abstract class MixinAbstractClientPlayer {
             case "tux":
                 callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capetux.png"));
                 break;
+            case "flushed":
+                callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capeflushed.png"));
+                break;
             }
         }
     }
