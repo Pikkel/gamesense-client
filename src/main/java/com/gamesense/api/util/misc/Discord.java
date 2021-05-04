@@ -25,10 +25,10 @@ public class Discord {
         discordRPC.Discord_Initialize(discordID, eventHandlers, true, null);
 
         discordRichPresence.startTimestamp = System.currentTimeMillis() / 1000L;
-        discordRichPresence.details = "Sucking dick";
+        discordRichPresence.details = "Sucking a throbbing cock";
         discordRichPresence.largeImageKey = "clientrpc";
         discordRichPresence.largeImageText = "https://femboycock.club/";
-        discordRichPresence.state = "b0.2";
+        discordRichPresence.state = "b0.2.1";
         discordRPC.Discord_UpdatePresence(discordRichPresence);
     }
 
