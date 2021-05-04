@@ -1,40 +1,62 @@
+//ngl, I should make this have options
+
 package com.gamesense.client.module.modules.misc;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import com.gamesense.api.util.misc.MessageBus;
 import com.gamesense.client.module.Category;
 import com.gamesense.client.module.Module;
-import com.gamesense.api.setting.values.*;
-import com.gamesense.api.setting.Setting;
-import me.zero.alpine.listener.EventHandler;
-import me.zero.alpine.listener.Listener;
-import net.minecraftforge.client.event.ClientChatReceivedEvent;
 
-import java.util.Arrays;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
 
-/*
-    @Author NB419
-    @Since 04/22/21
+/**
+ * A module that sends a message to a player when they come into render distance
+ * 
+ * @author JetbladeDevsStuff
  */
 
 @Module.Declaration(name = "AutoGroom", category = Category.Misc)
 public class AutoGroom extends Module {
-    
-    ModeSetting msgmode = registerMode("Mode", Arrays.asList("Kitten", "Princess"), "Kitten");
+    public String msg = "♥ hey kitten ♥";
+    private List<EntityPlayer> lastTickPlayers;
 
-    @SuppressWarnings("unused")
-    @EventHandler
-    private final Listener<ClientChatReceivedEvent> listener = new Listener<>(event -> {
-        if (event.getMessage().getUnformattedText().contains("whispers: ") && !event.getMessage().getUnformattedText().startsWith(mc.player.getName())) {
-           
-            if (msgmode.getValue().equalsIgnoreCase("Kitten")) {
-                MessageBus.sendServerMessage("/r hi kitten :)");
+    @Override
+    public void onUpdate() {
+        List<EntityPlayer> thisTickPlayers = collectPlayersInRenderDistance();
+
+        // see if there are any new players this tick
+        List<EntityPlayer> newPlayers = new ArrayList<>();
+        for (EntityPlayer e : thisTickPlayers) {
+            if (!lastTickPlayers.contains(e)) {
+                // if the last tick doesnt have this player
+                newPlayers.add(e);
             }
-            else{
-                MessageBus.sendServerMessage("/r hi princess <3");
-            }
-            
-            
         }
-    });
 
+        for (EntityPlayer e : newPlayers) {
+            MessageBus.sendServerMessage("/msg " + msg);
+        }
+
+        lastTickPlayers = thisTickPlayers;
+    }
+
+    /**
+     * A helper function to get any players in render distance
+     * 
+     * @return the players in render distance
+     */
+    private List<EntityPlayer> collectPlayersInRenderDistance() {
+        List<Entity> entities = mc.world.loadedEntityList;
+        List<EntityPlayer> players = new ArrayList<>();
+        for (Entity e : entities) {
+            if (e instanceof EntityPlayer) {
+                players.add((EntityPlayer) e);
+            }
+        }
+
+        return players;
+    }
 }
