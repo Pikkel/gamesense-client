@@ -54,6 +54,12 @@ public abstract class MixinAbstractClientPlayer {
             case "lofi":
                 callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capelofiblack.png"));
                 break;
+            case "debian white":
+                callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capedebianwhite.png"));
+                break;
+            case "debian black":
+                callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capedebianblack.png"));
+                break;
             case "gentowo":
                 callbackInfoReturnable.setReturnValue(new ResourceLocation("gamesense:capegentowo.png"));
                 break;
