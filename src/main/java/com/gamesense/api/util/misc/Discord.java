@@ -26,7 +26,7 @@ public class Discord {
 
         discordRichPresence.startTimestamp = System.currentTimeMillis() / 1000L;
         discordRichPresence.details = "Sucking a throbbing cock";
-        discordRichPresence.largeImageKey = "clientrpc";
+        discordRichPresence.largeImageKey = "clientrpccircle";
         discordRichPresence.largeImageText = "https://femboycock.club/";
         discordRichPresence.state = "b0.2.1";
         discordRPC.Discord_UpdatePresence(discordRichPresence);
